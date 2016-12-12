@@ -610,7 +610,7 @@ int ContactList::find(ostream &output, string lastname, string firstname)
 
 	ListNode *curr;
 
-	Name currName, toDelName;
+	Name currName;
 	string currTelephone, currEmail;
 
 	// if list empty, do not do anything
@@ -633,15 +633,15 @@ int ContactList::find(ostream &output, string lastname, string firstname)
 			// item to delete data is smaller than curr item data, so
 			// it cannot be in remainder of the list, stop searching
 
-			if ((toDelName.last() >= currName.last()))
+			if ((lastname >= currName.last()))
 			{
 
-				if ((toDelName.last() == currName.last()))
+				if ((lastname == currName.last()))
 				{
 
-					if ((toDelName.first() >= currName.first()))
+					if ((firstname >= currName.first()))
 					{
-						if ((toDelName.first() == currName.first()))
+						if ((firstname == currName.first()))
 						{
 
 							output << setw(16) << left << currName.last() << " ";
@@ -660,7 +660,7 @@ int ContactList::find(ostream &output, string lastname, string firstname)
 							curr = curr->next;
 						}
 					}// firstName
-					else if ((toDelName.first() < currName.first()))
+					else if ((firstname < currName.first()))
 					{
 						break;
 					}
@@ -670,7 +670,7 @@ int ContactList::find(ostream &output, string lastname, string firstname)
 					curr = curr->next;
 				}
 			}// lastname
-			else if (toDelName.last() < currName.last())
+			else if (lastname < currName.last())
 			{
 				break;
 			}
