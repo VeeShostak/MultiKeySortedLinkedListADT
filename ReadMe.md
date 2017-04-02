@@ -1,6 +1,6 @@
-#MultiKeySortedLinkedListADT
+# MultiKeySortedLinkedListADT
 
-##Program Description:
+## Program Description:
 
 The contact list is kept in ascending sorted order by last name as primary key, first name as secondary
 key, telephone number as tertiary key, and email address as quaternary key. 
@@ -11,7 +11,7 @@ representation. The implementations of insertions and deletions make a single pa
 in the worst case.
 
 
-##Program Tasks:
+## Program Tasks:
 
 The program ensures that only valid names are stored in the contact list. It assumes that the user 
 enters at least one correct character, so that a name is never an empty string. The program should 
